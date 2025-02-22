@@ -48,7 +48,10 @@ Update `utils/config.py` with the appropriate values, such as API URLs and the p
 
 Example `config.py`:
 ```python
-CA_PATH = "CA/cert.crt"
+CLIENT_ID = "e38bf8cf-822c-4ce7-bad7-xxxxxx"    # Replace with your registered client ID
+FLOW_NAME = "org.gluu.agama.registration.main"  # Replace with your Agama flow name
+ACR_VALUES = "agama_challenge"
+CA_PATH = "CA/cert.crt" 
 API_BASE_URL = "https://your-jans-server.com/jans-auth/restv1/authorize-challenge"
 ```
 
@@ -58,12 +61,6 @@ API_BASE_URL = "https://your-jans-server.com/jans-auth/restv1/authorize-challeng
 - Dynamic UI updates for errors and success messages
 - Reset functionality to re-use the registration form
 
-## Building a Standalone Executable
-To package the application into a single executable file:
-```bash
-pyinstaller --onefile --windowed main.py
-```
-The built executable will be available in the `dist/` folder.
 
 ## Troubleshooting
 If you encounter `ModuleNotFoundError: No module named 'tkinter'`, install Tkinter:
@@ -72,6 +69,5 @@ sudo apt install python3-tk -y
 ```
 To debug SSL issues related to CA certificates, ensure the correct path is set in `config.py`.
 
-## License
-This project is open-source and available under the MIT License.
+
 
