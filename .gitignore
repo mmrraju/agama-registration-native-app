@@ -1,0 +1,18 @@
+# Ignore Python-related files
+__pycache__/
+*.pyc
+*.pyo
+
+# Ignore VS Code settings
+.vscode/
+
+# Ignore build folder
+build/
+
+# Ignore environment files
+.env
+venv/
+
+# Ignore logs and temporary files
+*.log
+*.tmp
